@@ -18,6 +18,7 @@ jobs:
           dotnet --info
           echo "Node Verion ---" 
           node -v
+          echo $GITHUB_WORKSPACE
   
   run-shell1-command:
     runs-on: ubuntu-latest
