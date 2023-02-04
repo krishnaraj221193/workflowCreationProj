@@ -15,3 +15,16 @@ jobs:
           dotnet --info
           echo "Node Verion ---" 
           node -v
+  
+  run-shell1-command:
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo a string
+        run: echo "Hello World from 1"
+        
+      - name: dotnet & node Version
+        run: |
+          echo "dotnet Verion ---" 
+          dotnet --info
+          echo "Node Verion ---" 
+          node -v
