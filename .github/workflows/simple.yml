@@ -3,8 +3,9 @@ name: Shell Command
 on: 
   # push:
   pull_request: 
-      branches: [develop,'*---test']
-    
+      branches: [develop]
+  push:
+      branches: [feature/**---gem]
 
 jobs:
   run-shell-command:
