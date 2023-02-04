@@ -11,5 +11,5 @@ jobs:
         
       - name: dotnet & node Version
         run: |
-          dotnet --info
-          node -v
+          echo "dotnet Verion ---" dotnet --info
+          echo "Node Verion ---" node -v
