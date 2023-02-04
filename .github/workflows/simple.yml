@@ -37,3 +37,9 @@ jobs:
           dotnet --info
           echo "Node Verion ---" 
           node -v
+      - name: perform check for prefix
+        if: ${{ startsWith(github.event.pull_request.title, 'AB#') != true }}
+        uses: actions/github-script@v6
+        with:
+          script: |
+            core.setFailed('The pull request title must start with "AB#[ADO work item number] - ". Example: "AB#475575 - Making the blue key component generic" ')
