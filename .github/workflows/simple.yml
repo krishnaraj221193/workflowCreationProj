@@ -10,7 +10,7 @@ jobs:
         run: echo "Hello World"
       
       - name: checkout the branch
-        uses: actions/hello-world-javascript-action@main
+        uses: actions/checkout@v1
 
       - name: dotnet & node Version
         run: |
