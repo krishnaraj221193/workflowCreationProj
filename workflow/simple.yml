@@ -8,7 +8,6 @@ jobs:
     steps:
       - name: echo a string
         run: echo "Hello World"
-
       - name: dotnet & node Version
         run: |
           dotnet --info
