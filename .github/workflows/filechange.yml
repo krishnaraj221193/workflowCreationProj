@@ -24,7 +24,7 @@ jobs:
           ls -a
       -  if: always()
          run: |
-          echo ${{format('{0} -- {1}','Krishna' ,GITHUB_ACTION)}}
+          echo ${{format('{0} -- {1}','Krishna' ,'$GITHUB_ACTION')}}
           ls -a
       
         # App.ServerRootAddress: ${{ env.SERVER_ROOT_ADDRESS }}
