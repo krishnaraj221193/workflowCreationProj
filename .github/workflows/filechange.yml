@@ -12,14 +12,14 @@ jobs:
       #     ls -a
       
       # - name: Replace Command      
-      -  uses: actions/checkout@master       
-      -  uses: microsoft/variable-substitution@v1 
-         with:
-          files: '${HOME}/appsettings.json'
-         env:
-          ConnectionStrings.Default: ${{ secrets.SOME_CONNECTION_STRING }}
+      # -  uses: actions/checkout@master       
+      # -  uses: microsoft/variable-substitution@v1 
+      #    with:
+      #     files: '${HOME}/appsettings.json'
+      #    env:
+      #     ConnectionStrings.Default: ${{ secrets.SOME_CONNECTION_STRING }}
       -  run: |
-          echo "display"
+          echo $HOME
           ls -a
       
         # App.ServerRootAddress: ${{ env.SERVER_ROOT_ADDRESS }}
