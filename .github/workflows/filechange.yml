@@ -26,6 +26,7 @@ jobs:
          run: |
           echo ${{format('{0} -- {1}','Krishna' ,'$GITHUB_ACTION')}}
           ls -a
+          cat appsettings.json
       
         # App.ServerRootAddress: ${{ env.SERVER_ROOT_ADDRESS }}
 
