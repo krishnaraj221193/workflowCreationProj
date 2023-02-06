@@ -1,6 +1,6 @@
 name: File Content Changes
 
-on: [push]
+on: push
 
 jobs:
   run-file-content-command:
