@@ -1,21 +1,23 @@
 name: File Content Changes
 
-on: push
+on: [push]
 
 jobs:
   run-file-content-command:
     runs-on: ubuntu-latest
+    
     steps:
-      - name: file Content Checkout
-        uses: actions/checkout@${{ github.sha }}
-        run: |
-          ls -a
+       - uses: actions/checkout@${{ github.sha }}
+       - name: file Content Checkout        
+         run: |
+           echo "ls -a"
+           ls -a
       
-      - name: App Settings Variable Substitution
-        uses: microsoft/variable-substitution@v1
-        with:
+       - name: Replace Command
+         uses: microsoft/variable-substitution@v1         
+         with:
           files: '${{env.DOTNET_ROOT}}/myapp/appsettings.json'
-        env:
+         env:
           ConnectionStrings.Default: ${{ secrets.SOME_CONNECTION_STRING }}
         # App.ServerRootAddress: ${{ env.SERVER_ROOT_ADDRESS }}
 
