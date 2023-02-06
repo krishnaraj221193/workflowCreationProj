@@ -16,8 +16,10 @@ jobs:
       -  uses: actions/checkout@${{ github.sha }}        
       -  uses: microsoft/variable-substitution@v1 
          with:
-          files: '${{HOME}}/myapp/appsettings.json'
+          files: '${{HOME}}/appsettings.json'
          env:
           ConnectionStrings.Default: ${{ secrets.SOME_CONNECTION_STRING }}
+      -  run: ls -a
+      
         # App.ServerRootAddress: ${{ env.SERVER_ROOT_ADDRESS }}
 
