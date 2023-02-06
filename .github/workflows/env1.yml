@@ -6,7 +6,7 @@ env:
   wf_var: ${{secrets.WF_SECURITY}}
 
 jobs:
-  run-with-global-env:
+  run-with-global-env1:
     env:
       job_env: this is job variable
     runs-on: ubuntu-latest
@@ -25,7 +25,7 @@ jobs:
           echo "job_env: ${job_env}" 
           echo "step_env: ${step_env}"
           
-  run-with-only-global-env:    
+  run-with-only-global-env2:    
     runs-on: ubuntu-latest
     steps:
       - name: with global       
