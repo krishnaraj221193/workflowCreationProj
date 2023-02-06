@@ -12,7 +12,7 @@ jobs:
       #     ls -a
       
       # - name: Replace Command      
-      -  uses: actions/checkout@${{ github.sha }}        
+      -  uses: actions/checkout@${ github.sha}        
       -  uses: microsoft/variable-substitution@v1 
          with:
           files: '${{HOME}}/appsettings.json'
