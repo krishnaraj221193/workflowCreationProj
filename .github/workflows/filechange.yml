@@ -15,7 +15,7 @@ jobs:
       -  uses: actions/checkout@master       
       -  uses: microsoft/variable-substitution@v1 
          with:
-           files: $HOME/appsettings.json
+           files: appsettings.json
          env:
           ConnectionStrings.Default: ${{ secrets.SOME_CONNECTION_STRING }}
       -  if: failure()
@@ -24,7 +24,7 @@ jobs:
           ls -a
       -  if: always()
          run: |
-          echo ${format("{0} -- {1}","Krishna ,$HOME)}}
+          echo ${{format("{0} -- {1}","Krishna ,$HOME)}}
           ls -a
       
         # App.ServerRootAddress: ${{ env.SERVER_ROOT_ADDRESS }}
