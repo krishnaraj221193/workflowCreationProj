@@ -19,7 +19,9 @@ jobs:
           files: '${{HOME}}/appsettings.json'
          env:
           ConnectionStrings.Default: ${{ secrets.SOME_CONNECTION_STRING }}
-      -  run: ls -a
+      -  run: |
+          echo "display"
+          ls -a
       
         # App.ServerRootAddress: ${{ env.SERVER_ROOT_ADDRESS }}
 
