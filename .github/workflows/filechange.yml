@@ -18,13 +18,17 @@ jobs:
            files: appsettings.json
          env:
           ConnectionStrings.Default: ${{ secrets.SOME_CONNECTION_STRING }}
+          PingConfig: ${{vars.PINGCONFIG}}
+          DAMConfig: ${{secrets.DAMCONFIG}}
       -  if: failure()
          run: |
           echo $HOME
+          echo "${{vars.PINGCONFIG}}"
           ls -a
       -  if: always()
          run: |
           echo ${{format('{0} -- {1}','Krishna' ,'$GITHUB_ACTION')}}
+          
           ls -a
           cat appsettings.json
       
