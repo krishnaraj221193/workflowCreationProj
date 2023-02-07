@@ -25,6 +25,7 @@ jobs:
       -  if: always()
          run: |
           echo ${{format('{0} -- {1}','Krishna' ,'$GITHUB_ACTION')}}
+          echo ${{vars.PINGCONFIG}}
           ls -a
           cat appsettings.json
       
