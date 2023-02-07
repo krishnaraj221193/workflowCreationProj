@@ -19,6 +19,7 @@ jobs:
          env:
           ConnectionStrings.Default: ${{ secrets.SOME_CONNECTION_STRING }}
           PingConfig: ${{vars.PINGCONFIG}}
+          DAMConfig: ${{secrets.DAMCONFIG}}
       -  if: failure()
          run: |
           echo $HOME
